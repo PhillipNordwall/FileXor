@@ -1,0 +1,5 @@
+venv
+*.pyc
+.ropeproject
+FileXor.egg-info
+__pycache__
