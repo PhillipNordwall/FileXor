@@ -11,7 +11,7 @@ with codecs.open(os.path.join(here, 'README.rst'), encoding='UTF-8') as f:
 
 setuptools.setup(
     name='FileXor',
-    version='0.1.0a1',
+    version='0.2.0a1',
     description='',
     long_description='',
     url='',
