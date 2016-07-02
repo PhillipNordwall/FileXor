@@ -1,7 +1,6 @@
 import hashlib
 import random
 import codecs
-import operator
 
 
 def krandgen(key):
@@ -37,7 +36,7 @@ def fkrandxor(key, infile, outfile):
     gen = krandgen(key)
     with open(infile, "rb") as fin:
         with open(outfile, 'wb') as fout:
-            fout.write(bytes(map(operator.xor, fin.read(), gen)))
+            fout.write(bytes(f ^ g for f, g in zip(fin.read(), gen)))
 
 def fxor(padfile, infile, outfile):
     """Encrypt an input file to an output file using a One-Time-Pad specified.
@@ -56,4 +55,4 @@ def fxor(padfile, infile, outfile):
     with open(infile, "rb") as fin:
         with open(outfile, 'wb') as fout:
             with open(padfile, "rb") as fpad:
-                fout.write(bytes(map(operator.xor, fin.read(), fpad.read())))
+                fout.write(bytes(f ^ g for f, g in zip(fin.read(), fpad.read())))
