@@ -15,6 +15,11 @@ from docopt import docopt
 from FileXor import fkrandxor, fxor
 
 
+def cli():
+    args = docopt(__doc__, version='File XOR Utility 0.2.1.a1')
+    main(args)
+
+
 def main(args):
     """Program entry point.
 
@@ -35,5 +40,4 @@ def main(args):
         fkrandxor(args['<key>'], args['<infile>'], args['<outfile>'])
 
 if __name__ == '__main__':
-    args = docopt(__doc__, version='File XOR Utility 0.2.1.a1')
-    main(args)
+    cli()

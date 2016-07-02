@@ -33,7 +33,7 @@ setuptools.setup(
     },
     entry_points={
         'console_scripts': [
-            'FileXor=filexor.py:main',
+            'FileXor=FileXor.__main__:cli',
         ]
     }
 )
