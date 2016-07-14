@@ -33,7 +33,7 @@ def main(args):
 
     Raises:
     """
-    #todo add file validation through schema
+    # todo add file validation through schema
     if args['-p']:
         fxor(args['<padfile>'], args['<infile>'], args['<outfile>'])
     else:

@@ -29,7 +29,7 @@ setuptools.setup(
     packages=setuptools.find_packages(exclude=['tests', 'venv']),
     install_requires=['docopt'],
     extras_require={
-        'test':['pytest'],
+        'test': ['pytest'],
     },
     entry_points={
         'console_scripts': [
