@@ -16,7 +16,7 @@ from FileXor import fkrandxor, fxor
 
 
 def cli():
-    args = docopt(__doc__, version='File XOR Utility 0.2.1.a1')
+    args = docopt(__doc__, version='File XOR Utility 0.2.2.a1')
     main(args)
 
 
