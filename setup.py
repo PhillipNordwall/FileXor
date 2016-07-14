@@ -11,7 +11,7 @@ with codecs.open(os.path.join(here, 'README.rst'), encoding='UTF-8') as f:
 
 setuptools.setup(
     name='FileXor',
-    version='0.2.1a1',
+    version='0.2.2a1',
     description='',
     long_description='',
     url='',
@@ -29,11 +29,11 @@ setuptools.setup(
     packages=setuptools.find_packages(exclude=['tests', 'venv']),
     install_requires=['docopt'],
     extras_require={
-        'test':['pytest'],
+        'test': ['pytest'],
     },
     entry_points={
         'console_scripts': [
-            'FileXor=filexor.py:main',
+            'FileXor=FileXor.__main__:cli',
         ]
     }
 )
